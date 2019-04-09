@@ -25,3 +25,10 @@ export function logout() {
     method: 'post'
   })
 }
+
+export function test() {
+  return request({
+    url: '/admin/test',
+    method: 'get'
+  })
+}
