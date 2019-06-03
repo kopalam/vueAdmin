@@ -42,8 +42,9 @@
   </div>
 </template>
 
+
 <script>
-import { getList } from '@/api/table'
+import { group } from '@/api/auth'
 
 export default {
   filters: {
@@ -58,18 +59,22 @@ export default {
   },
   data() {
     return {
-      list: null,
-      listLoading: true
+      lists:'',
+      listLoading,
+      rules: null,
+      rule_id:'',
+      title: true
     }
   },
   created() {
-    this.fetchData()
+    // this.fetchData()
   },
   methods: {
     fetchData() {
       this.listLoading = true
-      getList(this.listQuery).then(response => {
-        this.list = response.data.items
+       group('group').then(response => {
+        this.list = response.data
+        console.log(this.list);
         this.listLoading = false
       })
     }

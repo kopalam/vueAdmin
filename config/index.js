@@ -9,19 +9,19 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {
-      '/api': {
-        target: 'http://funx.test', //设置你调用的接口域名和端口号 别忘了加http
-        changeOrigin: true,//允许跨域
-        pathRewrite: {
-            '^/api': ''//这个是定义要访问的路径，名字随便写
-        }
-      }
-    },
+    // proxyTable: {
+    //   '/api': {
+    //     target: 'http://funx.test', //设置你调用的接口域名和端口号 别忘了加http
+    //     changeOrigin: true,//允许跨域
+    //     pathRewrite: {
+    //         '^/api': ''//这个是定义要访问的路径，名字随便写
+    //     }
+    //   }
+    // },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
-    port: 9528, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: 9529, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: true,
     errorOverlay: true,
     notifyOnErrors: false,
@@ -30,7 +30,7 @@ module.exports = {
     // Use Eslint Loader?
     // If true, your code will be linted during bundling and
     // linting errors and warnings will be shown in the console.
-    useEslint: true,
+    useEslint: false,
     // If true, eslint errors and warnings will also be shown in the error overlay
     // in the browser.
     showEslintErrorsInOverlay: false,

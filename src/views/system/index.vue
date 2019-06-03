@@ -52,7 +52,7 @@ import { group } from '@/api/auth'
 export default {
   data() {
     return {
-      testData: '',
+      groupData: [],
       form: {
         name: '',
         region: '',
@@ -77,8 +77,8 @@ export default {
     },
     getList() {
       group('group').then(res=>{
-        this.testData = res.data,
-        console.log(this.testData)
+        this.groupData = res.data,
+        console.log(this.groupData)
       })
     }
   },

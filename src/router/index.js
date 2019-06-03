@@ -80,7 +80,32 @@ export const constantRouterMap = [
       }
     ]
   },
-
+  {
+    path: '/topic',
+    component: Layout,
+    name: 'Topic',
+    meta: { title: '专题', icon: 'example' },
+    children: [
+      {
+        path: 'createTopic',
+        name: 'CreateTopic',
+        component: () => import('@/views/topic/create'),
+        meta: { title: '创建专题', icon: 'system' }
+      },
+      {
+        path: 'topicList',
+        name: 'TopicList',
+        component: () => import('@/views/topic/list'),
+        meta: { title: '专题列表', icon: 'system' }
+      },
+      {
+        path: 'topicType',
+        name: 'topicType',
+        component: () => import('@/views/topic/type'),
+        meta: { title: '创建分类', icon: 'system' }
+      }
+    ]
+  },
   {
     path: '/form',
     component: Layout,
